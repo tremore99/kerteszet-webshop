@@ -1,0 +1,38 @@
+<div class="main_component">
+    <div class="div-flex"> 
+        <h1>Sign Up</h1>
+        <form [formGroup]="signUpForm" (ngSubmit)="onSubmit()">
+            <mat-form-field>
+                <mat-label for="email">Email: </mat-label>
+                <input matInput type="text" formControlName="email">
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label for="psw">Password: </mat-label>
+                <input matInput type="password" formControlName="password">
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label for="repsw">Confirm password: </mat-label>
+                <input matInput type="password" formControlName="rePassword">
+            </mat-form-field>
+            <div formGroupName="name" class="subForm">
+                <mat-form-field>
+                    <mat-label for="firstname">First name: </mat-label>
+                    <input matInput type="text" formControlName="firstname">
+                </mat-form-field>
+                <mat-form-field>
+                    <mat-label for="lastname">Last name: </mat-label>
+                    <input matInput type="text" formControlName="lastname">
+                </mat-form-field>
+            </div>
+            <div>
+                <span class="buttons">
+                    <button mat-raised-button color="primary" type="submit">Sign Up</button>
+                </span>
+                <span class="buttons">
+                    <button mat-raised-button color="primary" (click)="goBack()">Back</button>
+                </span>
+                <p>If you have an account, login <a routerLink="/login">here</a>.</p>
+            </div>
+        </form>
+    </div>
+</div>

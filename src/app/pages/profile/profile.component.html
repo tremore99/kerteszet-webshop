@@ -1,0 +1,49 @@
+<!-- 
+<div class="main_component div-flex" >
+    <mat-card class="div-flex">
+        <mat-card-header>
+            <mat-card-title>Profile</mat-card-title>
+        </mat-card-header>
+
+        <mat-card-content>
+            <p>Username: {{username}}</p>
+            <p>Email: {{email}}</p>
+            <p>First Name: {{first_name}}</p>
+            <p>Last Name: {{last_name}}</p>
+        </mat-card-content>
+    </mat-card>
+</div>
+-->
+
+<div class="main_component">
+    <div class="div-flex">
+        <h1>Profile</h1>
+        <form [formGroup]="userForm" (ngSubmit)="onChange()">
+            <input type="hidden" formControlName="id" value={{id}} readonly>
+            <mat-form-field>
+                <mat-label for="username">Username: {{username}} </mat-label>
+                <input matInput placeholder="New username" type="text" formControlName="username">
+            </mat-form-field>
+                <label for="email">Email: </label>
+                <input type="text" formControlName="email" value={{email}} readonly>
+            <div formGroupName="name" class="subForm">
+                <mat-form-field>
+                    <mat-label for="firstname">First name: {{firstname}} </mat-label>
+                    <input matInput placeholder="New first name" type="text" formControlName="firstname">
+                </mat-form-field>
+                <mat-form-field>
+                    <mat-label for="lastname">Last name: {{lastname}} </mat-label>
+                    <input matInput placeholder="New last name" type="text" formControlName="lastname">
+                </mat-form-field>
+            </div>
+            <div>
+                <span class="buttons">
+                    <button mat-raised-button color="primary" type="submit">Update</button>
+                </span>
+                <span class="buttons">
+                    <button mat-raised-button color="primary" (click)="goBack()">Back</button>
+                </span>
+            </div>
+        </form>
+    </div>
+</div>

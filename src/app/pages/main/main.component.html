@@ -1,0 +1,10 @@
+<div>
+    <table>
+        <tr *ngFor="let image of images; let i = index;"
+        [ngStyle]="{'background-color' : i % 2 === 0 ? 'darkcyan' : 'cyan'}">
+        <td>{{image.name}}</td>
+        <td><img src={{image.url}}></td>
+    </tr>
+    </table>
+</div>
+

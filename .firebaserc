@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "kerteszet-webshop": {
+      "hosting": {
+        "kerteszet-webshop": [
+          "kerteszet-webshop"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "kerteszet-webshop"
+  }
+}

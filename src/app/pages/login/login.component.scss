@@ -1,0 +1,38 @@
+div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    height: 100%;
+}
+
+.main_component {
+    height: 100vh;
+    align-items: center;
+}
+
+
+a {
+    font-weight:bolder;
+    text-decoration: none;
+    color: black;
+}
+
+mat-form-field {
+    width: 25%;
+}
+
+button {
+    margin-bottom: 15px;
+}
+
+p {
+    font-size: 16px;
+}
+
+h1 {
+    font-size: 36px;
+}
+
+
+
